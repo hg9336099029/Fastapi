@@ -1,6 +1,7 @@
+from Assignment_2.app.api import courses
 from fastapi import FastAPI
-from app.database import engine, Base
-from app.api import students, courses
+from Assignment_2.app.database import engine, Base
+from Assignment_2.app.api import students
 
 # Create the database tables
 Base.metadata.create_all(bind=engine)

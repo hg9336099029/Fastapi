@@ -2,9 +2,9 @@ from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 from typing import List
 
-from app.schemas.student import Student, StudentCreate, StudentUpdate
-from app.services import student as student_service
-from app.database import get_db
+from Assignment_2.app.schemas.student import Student, StudentCreate, StudentUpdate
+from Assignment_2.app.services import student as student_service
+from Assignment_2.app.database import get_db
 
 router = APIRouter(
     prefix="/students",
