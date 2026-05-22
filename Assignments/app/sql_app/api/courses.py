@@ -2,9 +2,9 @@ from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 from typing import List
 
-from app.sql_app.schemas.course import Course, CourseCreate, CourseUpdate
+from Assignments.app.sql_app.schemas.course import Course, CourseCreate, CourseUpdate
 from app.sql_app.services import course as course_service
-from app.database import get_db
+from Assignments.app.database import get_db
 
 router = APIRouter(
     prefix="/courses",

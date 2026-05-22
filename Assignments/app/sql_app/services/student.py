@@ -1,8 +1,8 @@
 from sqlalchemy.orm import Session
 from sqlalchemy.exc import IntegrityError
 from fastapi import HTTPException
-from app.sql_app.models.student import Student
-from app.sql_app.schemas.student import StudentCreate, StudentUpdate
+from Assignments.app.sql_app.models.student import Student
+from Assignments.app.sql_app.schemas.student import StudentCreate, StudentUpdate
 
 def get_student(db: Session, student_id: int):
     return db.query(Student).filter(Student.id == student_id).first()

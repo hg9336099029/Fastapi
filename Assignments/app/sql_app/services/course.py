@@ -1,8 +1,8 @@
 from sqlalchemy.orm import Session
 from sqlalchemy.exc import IntegrityError
 from fastapi import HTTPException
-from app.sql_app.models.course import Course
-from app.sql_app.schemas.course import CourseCreate, CourseUpdate
+from Assignments.app.sql_app.models.course import Course
+from Assignments.app.sql_app.schemas.course import CourseCreate, CourseUpdate
 
 def get_course(db: Session, course_id: int):
     return db.query(Course).filter(Course.id == course_id).first()

@@ -1,10 +1,10 @@
 from datetime import timedelta
 from typing import Optional
 
-from app.services.user_service import get_user_by_username
-from app.core.security import verify_password, create_access_token
-from app.schemas.auth_schema import LoginForm, Token
-from app.models.user import UserInDB
+from Assignments.app.services.user_service import get_user_by_username
+from Assignments.app.core.security import verify_password, create_access_token
+from Assignments.app.schemas.auth_schema import LoginForm, Token
+from Assignments.app.models.user import UserInDB
 
 ACCESS_TOKEN_EXPIRE_MINUTES = 60
 

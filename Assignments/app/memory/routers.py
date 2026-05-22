@@ -1,9 +1,9 @@
 from fastapi import APIRouter, HTTPException
 from typing import List
 
-from app.memory.schemas.student import Student, StudentCreate
-from app.memory.schemas.course import Course, CourseCreate
-from app.memory.schemas.enrollment import Enrollment, EnrollmentCreate, StudentCoursesResponse, CourseStudentsResponse
+from Assignments.app.memory.schemas.student import Student, StudentCreate
+from Assignments.app.memory.schemas.course import Course, CourseCreate
+from Assignments.app.memory.schemas.enrollment import Enrollment, EnrollmentCreate, StudentCoursesResponse, CourseStudentsResponse
 from app.memory.services import student_service, course_service, enrollment_service
 
 router = APIRouter(

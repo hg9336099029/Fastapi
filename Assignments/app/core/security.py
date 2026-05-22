@@ -6,9 +6,9 @@ from passlib.context import CryptContext
 from fastapi import Depends, HTTPException, status
 from fastapi.security import OAuth2PasswordBearer
 
-from app.core.config import settings
-from app.schemas.auth_schema import TokenData
-from app.models.user import UserInDB
+from Assignments.app.core.config import settings
+from Assignments.app.schemas.auth_schema import TokenData
+from Assignments.app.models.user import UserInDB
 
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/auth/login")
@@ -40,7 +40,7 @@ def get_current_user(token: str = Depends(oauth2_scheme)) -> UserInDB:
         token_data = TokenData(username=username, role=payload.get("role"))
     except JWTError:
         raise credentials_exception
-    from app.services.user_service import get_user_by_username
+    from Assignments.app.services.user_service import get_user_by_username
 
     user = get_user_by_username(token_data.username)
     if user is None:

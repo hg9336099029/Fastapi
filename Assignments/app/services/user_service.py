@@ -1,8 +1,8 @@
 from typing import Dict, Optional
 
-from app.models.user import UserInDB
-from app.schemas.auth_schema import UserCreate
-from app.core.security import get_password_hash
+from Assignments.app.models.user import UserInDB
+from Assignments.app.schemas.auth_schema import UserCreate
+from Assignments.app.core.security import get_password_hash
 
 fake_users_db: Dict[str, UserInDB] = {}
 

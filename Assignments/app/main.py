@@ -1,12 +1,12 @@
 import logging
 from fastapi import FastAPI
 
-from app.database import engine, Base
+from Assignments.app.database import engine, Base
 from app.sql_app.api import students as sql_students, courses as sql_courses
-from app.memory.routers import router as mem_router
-from app.api import auth as auth_router
-from app.api import admin as admin_router
-from app.middleware import register_app_middleware, register_exception_handlers
+from Assignments.app.memory.routers import router as mem_router
+from Assignments.app.api import auth as auth_router
+from Assignments.app.api import admin as admin_router
+from Assignments.app.middleware import register_app_middleware, register_exception_handlers
 
 # logging
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")

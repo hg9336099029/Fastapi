@@ -1,10 +1,10 @@
 from fastapi import APIRouter, Depends, HTTPException, Query
 from sqlalchemy.orm import Session
 
-from app.database import get_db
-from app.sql_app.models.student import Student as DBStudent
-from app.sql_app.models.course import Course as DBCourse
-from app.core.security import require_roles
+from Assignments.app.database import get_db
+from Assignments.app.sql_app.models.student import Student as DBStudent
+from Assignments.app.sql_app.models.course import Course as DBCourse
+from Assignments.app.core.security import require_roles
 
 router = APIRouter(prefix="/admin", tags=["admin"])
 
