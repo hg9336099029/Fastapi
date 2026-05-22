@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual env
+.venv/
+venv/
+env/
+ENV/
+
+# Editor directories
+.vscode/
+.idea/
+
+# Env files
+.env
+
+# Database
+sql_app.db
+*.sqlite3
+
+# Logs
+*.log
+
+# pytest
+.pytest_cache/
